@@ -1,6 +1,6 @@
 #!/usr/bin/swipl -f
 
-:- write('% 文字(a)をエラーなしで十回出力する問題 in Prolog.\n\n').
+:- write('% 10回定義した "文字(a)" をエラーなしで出力する課題 in Prolog.\n\n').
 
 % a は文字である
 % ↓ は 文字(a) :- true. の省略形ともいえる
