@@ -1,12 +1,12 @@
 #!/usr/bin/swipl -t main -f 
 
 main :-
-    write('% 未来 in Prolog.\n\n'),
+    writeln('% 未来 in Prolog.'), nl,
 
     % 「アトム」の一部分を取り出す述語、sub_atom がある。
     %  一部分を 変数X として扱える。
-    sub_atom(abc, 0, 2, _, X), writef('%t\n', [X]),
-    sub_atom(abc, 1, 2, _, X), writef('%t\n', [X]),
+    sub_atom(abc, 0, 2, _, X), writef('%t', [X]), nl,
+    sub_atom(abc, 1, 2, _, X), writef('%t', [X]), nl,
 
     % しかし、現在のProlog処理系では、
     % 述語の作者が変数として扱えるように定義した部分のみで、

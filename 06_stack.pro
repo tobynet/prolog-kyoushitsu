@@ -1,6 +1,6 @@
 #!/usr/bin/swipl -f
 
-:- write('% stack in Prolog.\n\n').
+:- writeln('% stack in Prolog.'), nl.
 
 % データ構造の例として、簡単に定義できる Stack を実装してみる
 
@@ -18,10 +18,10 @@
    スタックにpush(1,A,B),
    スタックにpush(2,B,C),
    スタックにpush(3,C,D),
-   writef('push後のスタック: %t\n', [D]),   % [3,2,1]
+   writef('push後のスタック: %t', [D]), nl,  % [3,2,1]
    スタックからpop(D,_,E),
    スタックからpop(E,_,F),
-   writef('pop後のスタック: %t\n', [F]).    % [1]
+   writef('pop後のスタック: %t', [F]), nl.    % [1]
 
 
 :- halt.

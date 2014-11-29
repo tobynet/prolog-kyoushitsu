@@ -1,6 +1,6 @@
 #!/usr/bin/swipl -f
 
-:- write('% member と似た select/3 とselect/4 との違い in Prolog.\n\n').
+:- writeln('% member と似た select/3 とselect/4 との違い in Prolog.'), nl.
 % ref. https://ja.wikipedia.org/wiki/Prolog#select
 
 % select/3 の使用例:
@@ -15,16 +15,16 @@
 %   false.
 
 :- select(X, [a,b,c], R),
-   writef('X = %t, R = %t;\n', [X, R]),
+   writef('X = %t, R = %t;', [X, R]), nl,
    fail; true.
 
-:- write('\n\n').
-:- write('% 補足:\n\n').
+:- nl, nl.
+:- writeln('% 補足:'), nl.
 %
-:- write('%% select/4 は select/3 と異なる挙動をするので注意が必要\n\n').
+:- writeln('%% select/4 は select/3 と異なる挙動をするので注意が必要'), nl.
 %  大きな違いは第三引数にある。
 
-:- write('%%% 第三引数に「定数」を入れた場合\n\n').
+:- writeln('%%% 第三引数に「定数」を入れた場合'), nl.
 %
 %       ?- select(X, [a,b,c], d, R).
 %       X = a,
@@ -35,12 +35,12 @@
 %       R = [a, b, d] ;
 %       false.
 :- select(X, [a,b,c], d, R), 
-   writef('X = %t, R = %t;\n', [X, R]),
+   writef('X = %t, R = %t;', [X, R]), nl,
    fail ;
-   true,
-   write('\n\n').
+   true.
 
-:- write('%%% 第三引数が「変数」の場合\n\n').
+:- nl, nl.
+:- writeln('%%% 第三引数が「変数」の場合'), nl.
 %
 %       % (Dは大文字なので変数扱いになる)
 %       ?- select(X, [a,b,c], D, R).
@@ -66,20 +66,19 @@
 %       R = [a, b, 3] ;
 %       false.
 :- select(X, [a,b,c], D, R), D = 3,
-   writef('X = %t, R = %t;\n', [X, R]),
+   writef('X = %t, R = %t;', [X, R]), nl, 
    fail ;
-   true,
-   write('\n\n').
+   true.
+:- nl, nl.
 
-:- write('%%% さかのぼって、計算も可能\n\n').
+:- writeln('%%% さかのぼって、計算も可能'), nl.
 %
 %       ?- select(X, [a,b,c], Y, R), Y is 4 + 3.
 
 :- select(X, [a,b,c], D, R), D is 4 + 3,
-   writef('X = %t, R = %t;\n', [X, R]),
+   writef('X = %t, R = %t;', [X, R]), nl,
    fail ;
-   true,
-   write('\n\n').
+   true.
 
 :- halt.
 

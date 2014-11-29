@@ -1,6 +1,6 @@
 #!/usr/bin/swipl -f
 
-:- write('% alphabet(a). から alphabet(Z). までを出力する課題(再帰を使う例) in Prolog.\n\n').
+:- writeln('% alphabet(a). から alphabet(Z). までを出力する課題(再帰を使う例) in Prolog.'), nl.
 
 % 一つ前の課題には下記のような一連の述語定義があった。
 % 
@@ -61,7 +61,7 @@
 %           Lisp でいう cdr。
 %
 文字を出力する([C|R]) :-
-  writef('alphabet(%t).\n', [C]),
+  writef('alphabet(%t).', [C]), nl,
   文字を出力する(R).
 
 :- 'a-Zまでの文字を出力する'.

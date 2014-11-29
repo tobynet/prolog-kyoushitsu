@@ -1,8 +1,8 @@
 #!/usr/bin/swipl -f
 
-:- write('% Prologで入力を扱う(アトムを直接連結する版)  in Prolog.\n\n').
+:- writeln('% Prologで入力を扱う(アトムを直接連結する版)  in Prolog.'), nl.
 
- \n がくるまで読み込む
+% \n がくるまで読み込む
 get_line('\n','').
 get_line(C, A) :-
   get_char(C2),

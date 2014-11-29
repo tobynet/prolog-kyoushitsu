@@ -1,13 +1,13 @@
 #!/usr/bin/swipl -f
 
 
-:- write('% selectを利用した例 in Prolog.\n\n').
+:- writeln('% selectを利用した例 in Prolog.'), nl.
 
 % refs.
 %   http://ja.wikipedia.org/wiki/Prolog#.E9.A0.86.E5.88.97
 %   https://ja.wikipedia.org/wiki/Prolog#select
 %
-:- write('今回は省略').
+:- writeln('今回は省略').
 
 % 補足:
 %

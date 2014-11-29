@@ -1,6 +1,6 @@
 #!/usr/bin/swipl -f
 
-:- write('% alphabet(a). から alphabet(Z). を出力する問題(再帰なし版) in Prolog.\n\n').
+:- writeln('% alphabet(a). から alphabet(Z). を出力する問題(再帰なし版) in Prolog.'), nl.
 
 % 学習のため、member/2 述語を上書きして定義してみる。
 % SWI-Prolog では member は組み込み述語でないため、上書きが可能。
@@ -28,7 +28,7 @@ member(A, [_|R]) :-
                'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 
                'Y', 'Z']),
 
-    writef('alphabet(%t).\n', [C]),
+    writef('alphabet(%t).', [C]), nl,
     fail; true.
 
 :- 'a-Zまでの文字を出力する(再帰なし)'.

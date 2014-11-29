@@ -1,6 +1,6 @@
 #!/usr/bin/swipl -f
 
-:- write('% Prologで入力を扱う(最後にリストからアトムへ変換する版)  in Prolog.\n\n').
+:- writeln('% Prologで入力を扱う(最後にリストからアトムへ変換する版)  in Prolog.'), nl.
 
 % Prolog で入力を扱うにはまず read(X) がある
 % ref. http://ja.wikipedia.org/wiki/Prolog#.E8.A1.8C.E5.85.A5.E5.8A.9B
